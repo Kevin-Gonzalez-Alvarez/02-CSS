@@ -1,0 +1,415 @@
+/* CSS.
+    Significa hojas de estilo en cascada y se utiliza para mostrar los elementos HTML en la pantalla incluyendo un diseño y variaciones en la visualizacion para diferentes dispositivos y tamaños de pantalla.
+  
+    =======================================================
+    Reglas de CSS
+    Una regla consta de un selector y un bloque de declaración*/
+
+/* 
+
+h1{color: gold; font-size: xx-large;}
+
+h1(*, .contenedor, id=contenedorAbuelo){
+    color: gold; 
+    font-size: xx-large;
+} 
+
+Tipos de selectores.
+    -Etiquetas: h1, body, img, p, h5...
+    -Clases: .contenedor
+    -id #contenedorAbuelo
+    -* Nos permite darle estilos a los elementos que sobran
+
+*/
+
+/* .Boton{
+    color: gold; 
+    background-color: navy;
+}
+
+#button2{
+    color: rgb(115, 6, 91);
+    background-color: chocolate;
+}
+
+#button3{
+    color: rgb(11, 29, 167);
+    background-color: rgb(13, 206, 45);
+    tab-size: 100px;
+}
+
+*{
+    background-color: rgb(43, 7, 62);
+} */
+
+/* Formas de insertar CSS
+
+    -CSS interno
+    -CSS en linea
+    -CSSA externo
+    
+    --- CSS interno
+    Se puede usar una hoja de estilo interna si una sola pagina de HTML tiene un estilo unico. Se define dentro del elemento (style) en el <head>.
+
+        h1{
+            color: gold;
+            margin-left: 20px;
+            margin-top: 50px;
+            font-size: xx-large;
+            font-style: oblique;
+        }
+
+        p{
+            color: gold;
+            margin-left: 20px;
+            margin-top: 50px;
+            font-size: xx-large;
+            font-style: oblique;
+        }
+    
+    --- CSS en linea
+    Se utiliza para aplicar estilos en la misma linea de codigo a un solo elemento.
+
+        <h1 style="color: gold;">Hola me llamo h1</h1>
+
+        <p style="color: gold;">Y yo soy un parrafo</p>
+
+
+    --- CSS externo
+    Hace referencia a una hoja de estilos externa con extensión .css
+    Se debe incluir una refencia al archivo de hoja de estilos en el head de nuestras paginas HTML con el siguiente elemento:
+
+    <link rel="stylesheet" href="/ubicacionHojaDeEstilo.css">
+
+    =======================================================
+
+    "Colores de CSS"
+
+    los colores se especifican utilizando nombres de colores predefinidos o valores RGB, HEX, HSL, RGBA, HSLA
+
+    CSS va admitir 140 nombres de colores estandar:
+    https://www.w3schools.com/cssref/css_colors.php
+
+    Paleta de colores:
+    https://colorhunt.co/
+
+    --- Color de fondo CSS
+    Permite establecer el color de fondo de los elementos 
+    Se accede a ella mediante la propiedad background=color:nombre/hex/rgb;
+
+    --- Color de texto
+    Puede establecer el color del texto de un elemento.
+    Se accede mediante la propiedad color:nombre/HEX/RGB;
+
+    --- Color de borde
+    Permite establecer el color de los bordes.
+    Se accede mediante la propiedad: boder-color:nombre/hex/rgb;
+
+===========================================================
+
+    --- Fondos de CSS (background)
+    
+    Las propiedades de fonde de CSS se utilizan para agregar efectos de fondo a los elementos.
+
+        background-color
+        background-image
+        background-repeat
+        background-attachment
+        background-position
+
+    --- Background-color
+    Esta propiedad especifica el color de fondo de un elemento.
+
+    h1{
+        background-color:nombreColor/RGB/HEX
+    }
+
+    --- Background-image
+    Esta propiedad especifica una imagen para usar como fondo de un elemento. De manera predetermianda, la imagen se repite para que cubra todo el elemento.
+
+    Se accede mediante la propiedad:
+    background-image: url(RuitaDeImage);
+
+
+    background-image: url(/assets/agumon.png);
+
+
+    *{
+    border-style: solid;
+    border-color: goldenrod;
+    background-color: rgb(68, 11, 89);
+    }
+
+    -- Repeticion de imagen de fondo
+    Todas las imagenes de fondo se repiten de manera horizontal y vertical.
+    Si queremos que se repita solo horizontalmente, utilizamos la propiedad background-repet:repeat-x;
+    Si queremos que se repita solo verticalmente, utilizamos la propiedad background-repet:repeat-y;
+
+    -- Posicion de la imagen de fondo
+    Se utiliza para especificar la posicion de la imagen de fondo y para ello se accede mediante la propiedad
+    background-position: 
+
+    body{
+    background-image: url(/assets/patito\ de\ goma.png);
+    background-repeat: no-repeat;
+    background-position: 100px 0px;
+
+    -- Border CSS
+    La propiedad border permite especificar el estilo, el ancho, el alto y el color del borde de un elemento.
+
+    --- Estilos de borde.
+    border-style y especifica que tipo de borde se muestra
+
+    Se permiten los siguientes valores: 
+        - dotted: borde punteado
+        - dashed: borde discontinuo
+        - solid: borde solido
+        - double: borde doble
+        - groove: borde ranurado 3D
+        - ridge: borde de insercion 3D
+        - inset: borde de inserción 3D
+        - outset : borde inicial 3D
+        - none : sin borde
+        - hidden : borde oculto
+
+        lado 1: top (lado de arriba)
+        lado 2: right (lado de derecha)
+        lado 3: bottom (lado de abajo)
+        lado 4: left (lado de izquierda)
+
+h1{
+    color: gold;
+    border-style: dotted solid none double;
+    border-color: rgb(51, 29, 71) coral gray gold;
+}
+
+
+    --- Ancho del borde
+    border-width especifica el ancho de los cuatro border
+
+    Tenemos tres valores predefinidos que son thin, medium o thick.
+
+    border-width: 3px 2px 4px 15px;
+    border-width: thick;
+    border-width: medium;
+    border-width: thin;
+
+    --- Border redondeados
+    border-radius se usa para agregar bordes redondeados a un elemento
+
+
+===========================================================
+
+-----------------------Texto en CSS------------------------
+
+la propiedad color:nombrecolor/rgb/hex establece el color del texto
+
+--- Alineación del texto
+text-align se utiliza para establecer la alineación horizontal de un texto. Puede estar alineado a la izquierda, derecha, centrado o justificado.
+
+#lilium{
+    color: goldenrod;
+    text-align: justify;
+}
+
+--- Decoración de texto
+    text-decoration
+
+    text-decoration: none; elimina la decoracion de texto por defecto que aparece en los enlaces. <a></a>
+
+--- Transformacion de texto CSS
+text-transform se utiliza para especificar si todas las letras seran mayusculas o minusculas, es decir transforma las letras.
+
+Podemos transformar a mayusculas con uppercase; a minusculas con lowercase o capitalizar la primer letra de cada palabra.
+
+
+===========================================================
+
+-----------------------Fuentes CSS-------------------------
+
+--- Familias de fuentes en CSS:
+
+    - Serif: Fuente con un pequeño trazo en los bordes cada letra.
+    - Sans-serif: Possen lineas limpias.
+    - Monoespaciada: Todas las letras tienen el mismo ancho fijo.
+    - Cursiva: Imitar la escritura humana.
+    - Fantasía: Son fuentes decorativas, divertidas.
+
+--- Propiedades de familias de fuentes en CSS
+    font-family: se utiliza para especificar la fuente de un texto. El nombre de la fuente que es mas de una palabra debe escribirse entre comilllas.
+
+--- Estilos de fuente
+    font-style: Esta propiedad modifica el estilo de la fuente y tiene tres valores: 
+
+    - normal. El texto se va a mostrar normalmente
+    - italic. El texto se muestra en cursiva
+    - oblic. El texto esta inclinado
+
+--- Grosor de fuente
+    font-weight la cual especifica el grosor de la fuente
+
+    - light
+    - normal
+    - bold
+    - bolder
+    - personalizado
+
+--- Tamaño de fuente
+    font-size que nos permite establecer el tamaño del texto
+
+--- Familias de fuentes externas
+
+<div>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</div>
+
+    #lilium{
+    font-family: 'Dancing Script', cursive; sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+===========================================================
+
+------------------Modelo de caja CSS-----------------------
+
+Es una caja que envuelve cada elemento HTML. Consiste en margenes, bordes, rellegnos y el contenido.
+
+    --- Parte de una caja de CSS
+        -Contenido de la caja (content box). El area donde se muestra el contenido.
+        -Relleno de la caja (padding box). Es el espacio en blanco alrededor del contenido.
+        -Borde de caja (border box). En vuelve el contenido y el relleno.
+        -Margen de caja (margin). Es la capa externa, envuelve el contenido, el relleno y el borde.
+
+
+
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html{
+    
+}
+
+#lilium{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+body{
+    background-color: rgb(93, 13, 131));
+    background-image: url(/assets/patito\ de\ goma.png);
+    background-repeat: no-repeat;
+    background-position: 550px 200px;
+    background-size: contain;  
+}
+
+h1{
+    color: gold;
+    text-align: center;
+    border-style: dotted solid outset double;
+    border-color: rgb(51, 29, 71) coral gray gold;
+    border-radius: 5px;
+    text-decoration-line: overline;
+    text-decoration-style: dashed;
+    text-decoration-color: red;
+    text-transform: uppercase;
+}
+
+p{
+    color: goldenrod;
+    text-align: center;
+    border-style: dashed;
+    border-color: rgb(196, 8, 8);
+    border-radius: 5px;
+    text-decoration-line:line-through;
+    text-decoration-style: double;
+    text-decoration-color: blue;
+    text-transform: lowercase;
+}
+
+html{
+    border-style: solid;
+    border-color: gold;
+}
+
+#lilium{
+    color: goldenrod;
+    text-align: justify;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color:green;
+    text-transform: capitalize;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+*/
+
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: lighter;
+    
+    
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: normal;
+    font-size: xx-large;
+}
+
+
+#lilium{
+    font-family: 'Dancing Script', cursive; sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: ;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+button{
+    border-style: solid;
+    border-color: gold;
+    padding: 25px 8px 25px 8px;
+    border-width: 5px 5px 5px 5px;
+    margin: 8px 25px 8px 25px;
+
+
+}
+
